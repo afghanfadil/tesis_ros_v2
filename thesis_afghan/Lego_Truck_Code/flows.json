@@ -1,0 +1,437 @@
+[
+    {
+        "id": "c3bd9fef19b9e200",
+        "type": "tab",
+        "label": "Flow 1",
+        "disabled": false,
+        "info": ""
+    },
+    {
+        "id": "fe9af3019161460b",
+        "type": "mqtt-broker",
+        "name": "",
+        "broker": "192.168.0.144",
+        "port": "1883",
+        "clientid": "",
+        "usetls": false,
+        "protocolVersion": "4",
+        "keepalive": "60",
+        "cleansession": true,
+        "birthTopic": "",
+        "birthQos": "0",
+        "birthPayload": "",
+        "birthMsg": {},
+        "closeTopic": "",
+        "closeQos": "0",
+        "closePayload": "",
+        "closeMsg": {},
+        "willTopic": "",
+        "willQos": "0",
+        "willPayload": "",
+        "willMsg": {},
+        "sessionExpiry": ""
+    },
+    {
+        "id": "b790ce2846d66ee0",
+        "type": "ui_tab",
+        "name": "Home",
+        "icon": "dashboard",
+        "disabled": false,
+        "hidden": false
+    },
+    {
+        "id": "01fdaf0c559cda9f",
+        "type": "ui_base",
+        "theme": {
+            "name": "theme-light",
+            "lightTheme": {
+                "default": "#0094CE",
+                "baseColor": "#0094CE",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "darkTheme": {
+                "default": "#097479",
+                "baseColor": "#097479",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif",
+                "edited": false
+            },
+            "customTheme": {
+                "name": "Untitled Theme 1",
+                "default": "#4B7930",
+                "baseColor": "#4B7930",
+                "baseFont": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+            },
+            "themeState": {
+                "base-color": {
+                    "default": "#0094CE",
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-titlebar-backgroundColor": {
+                    "value": "#0094CE",
+                    "edited": false
+                },
+                "page-backgroundColor": {
+                    "value": "#fafafa",
+                    "edited": false
+                },
+                "page-sidebar-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-textColor": {
+                    "value": "#1bbfff",
+                    "edited": false
+                },
+                "group-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "group-backgroundColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "widget-textColor": {
+                    "value": "#111111",
+                    "edited": false
+                },
+                "widget-backgroundColor": {
+                    "value": "#0094ce",
+                    "edited": false
+                },
+                "widget-borderColor": {
+                    "value": "#ffffff",
+                    "edited": false
+                },
+                "base-font": {
+                    "value": "-apple-system,BlinkMacSystemFont,Segoe UI,Roboto,Oxygen-Sans,Ubuntu,Cantarell,Helvetica Neue,sans-serif"
+                }
+            },
+            "angularTheme": {
+                "primary": "indigo",
+                "accents": "blue",
+                "warn": "red",
+                "background": "grey",
+                "palette": "light"
+            }
+        },
+        "site": {
+            "name": "Node-RED Dashboard",
+            "hideToolbar": "false",
+            "allowSwipe": "false",
+            "lockMenu": "false",
+            "allowTempTheme": "true",
+            "dateFormat": "DD/MM/YYYY",
+            "sizes": {
+                "sx": 48,
+                "sy": 48,
+                "gx": 6,
+                "gy": 6,
+                "cx": 6,
+                "cy": 6,
+                "px": 0,
+                "py": 0
+            }
+        }
+    },
+    {
+        "id": "9f5679a3b4191c2c",
+        "type": "ui_group",
+        "name": "Default",
+        "tab": "b790ce2846d66ee0",
+        "order": 1,
+        "disp": true,
+        "width": "6",
+        "collapse": false,
+        "className": ""
+    },
+    {
+        "id": "f8820a82d37e4476",
+        "type": "aedes broker",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "mqtt_port": 1883,
+        "mqtt_ws_bind": "port",
+        "mqtt_ws_port": null,
+        "mqtt_ws_path": "",
+        "cert": "",
+        "key": "",
+        "certname": "",
+        "keyname": "",
+        "dburl": "",
+        "usetls": false,
+        "x": 210,
+        "y": 60,
+        "wires": [
+            []
+        ]
+    },
+    {
+        "id": "24d009363eb2de29",
+        "type": "inject",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "Hai",
+        "payloadType": "str",
+        "x": 180,
+        "y": 140,
+        "wires": [
+            [
+                "615c0a96b7cec9a0"
+            ]
+        ]
+    },
+    {
+        "id": "615c0a96b7cec9a0",
+        "type": "mqtt out",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "topic": "/EV3_test",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe9af3019161460b",
+        "x": 380,
+        "y": 140,
+        "wires": []
+    },
+    {
+        "id": "feca0e8c844bd30d",
+        "type": "inject",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": false,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "100, 10",
+        "payloadType": "str",
+        "x": 190,
+        "y": 220,
+        "wires": [
+            [
+                "0a24549546ac8f19"
+            ]
+        ]
+    },
+    {
+        "id": "0a24549546ac8f19",
+        "type": "mqtt out",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "topic": "/EV3_movement",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe9af3019161460b",
+        "x": 420,
+        "y": 220,
+        "wires": []
+    },
+    {
+        "id": "b5fc10f849fad823",
+        "type": "ui_slider",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "label": "Speed",
+        "tooltip": "",
+        "group": "9f5679a3b4191c2c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": 0,
+        "max": "200",
+        "step": 1,
+        "className": "",
+        "x": 330,
+        "y": 340,
+        "wires": [
+            [
+                "c40dbc95d86fe31a",
+                "9a7186c4a329b9ed"
+            ]
+        ]
+    },
+    {
+        "id": "cd410bc2143ad75a",
+        "type": "ui_slider",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "label": "steer",
+        "tooltip": "{{msg.payload}}",
+        "group": "9f5679a3b4191c2c",
+        "order": 0,
+        "width": 0,
+        "height": 0,
+        "passthru": true,
+        "outs": "all",
+        "topic": "topic",
+        "topicType": "msg",
+        "min": "-200",
+        "max": "200",
+        "step": "5",
+        "className": "",
+        "x": 330,
+        "y": 400,
+        "wires": [
+            [
+                "748ae5a85f51e3c1",
+                "678118b296b10e3a"
+            ]
+        ]
+    },
+    {
+        "id": "c40dbc95d86fe31a",
+        "type": "ui_text",
+        "z": "c3bd9fef19b9e200",
+        "group": "9f5679a3b4191c2c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Speed",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 530,
+        "y": 340,
+        "wires": []
+    },
+    {
+        "id": "748ae5a85f51e3c1",
+        "type": "ui_text",
+        "z": "c3bd9fef19b9e200",
+        "group": "9f5679a3b4191c2c",
+        "order": 2,
+        "width": 0,
+        "height": 0,
+        "name": "",
+        "label": "Steer",
+        "format": "{{msg.payload}}",
+        "layout": "row-center",
+        "className": "",
+        "x": 530,
+        "y": 400,
+        "wires": []
+    },
+    {
+        "id": "ccf1ee0e99e5c78b",
+        "type": "inject",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "props": [
+            {
+                "p": "payload"
+            }
+        ],
+        "repeat": "",
+        "crontab": "",
+        "once": true,
+        "onceDelay": 0.1,
+        "topic": "",
+        "payload": "0",
+        "payloadType": "num",
+        "x": 190,
+        "y": 300,
+        "wires": [
+            [
+                "b5fc10f849fad823",
+                "cd410bc2143ad75a"
+            ]
+        ]
+    },
+    {
+        "id": "696e7f9e979bcc44",
+        "type": "ui_button",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "group": "9f5679a3b4191c2c",
+        "order": 4,
+        "width": 0,
+        "height": 0,
+        "passthru": false,
+        "label": "Zero",
+        "tooltip": "",
+        "color": "",
+        "bgcolor": "",
+        "className": "",
+        "icon": "",
+        "payload": "0",
+        "payloadType": "str",
+        "topic": "topic",
+        "topicType": "msg",
+        "x": 190,
+        "y": 480,
+        "wires": [
+            [
+                "b5fc10f849fad823",
+                "cd410bc2143ad75a"
+            ]
+        ]
+    },
+    {
+        "id": "9a7186c4a329b9ed",
+        "type": "mqtt out",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "topic": "/EV3_movement/speed",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe9af3019161460b",
+        "x": 650,
+        "y": 280,
+        "wires": []
+    },
+    {
+        "id": "678118b296b10e3a",
+        "type": "mqtt out",
+        "z": "c3bd9fef19b9e200",
+        "name": "",
+        "topic": "/EV3_movement/steer",
+        "qos": "",
+        "retain": "",
+        "respTopic": "",
+        "contentType": "",
+        "userProps": "",
+        "correl": "",
+        "expiry": "",
+        "broker": "fe9af3019161460b",
+        "x": 640,
+        "y": 460,
+        "wires": []
+    }
+]

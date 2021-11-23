@@ -1,0 +1,15 @@
+Header header
+float64 actual_xt
+float64 actual_yt
+float32 actual_yaw_t
+float64 actual_xh
+float64 actual_yh
+float32 actual_yaw_h
+float64 actual_speed_AV
+float64 actual_steer_AV
+
+float64 error_t
+float64 error_h
+float32_error_teta_ht
+float32_error_teta_t
+float32_error_teta_h
